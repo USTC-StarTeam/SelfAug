@@ -27,4 +27,9 @@ python update_module.py
 3. After updating, proceed with LoRA fine-tuning using the `transformers` package as usual.
 
 ## Citation
-TBD
+@article{huang2025selfaug,
+  title={Selfaug: Mitigating catastrophic forgetting in retrieval-augmented generation via distribution self-alignment},
+  author={Huang, Yuqing and Zhang, Rongyang and Wang, Qimeng and Lu, Chengqiang and Gao, Yan and Wu, Yi and Hu, Yao and Zhi, Xuyang and Liu, Guiquan and Li, Xin and others},
+  journal={arXiv preprint arXiv:2509.03934},
+  year={2025}
+}
