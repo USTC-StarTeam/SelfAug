@@ -149,6 +149,43 @@ python update_module.py</code></pre>
 <p>The main experimental control is the weight between task loss and self-distribution alignment loss. Keep the package versions and patched file paths fixed when reproducing reported results.</p>
 <h2 id="10-experimental-highlights">10. Experimental Highlights</h2>
 <p>SelfAug is designed to improve the balance between RAG specialization and general knowledge retention. The paper reports that preserving input-sequence distribution helps reduce catastrophic forgetting across fine-tuning scenarios.</p>
+<table>
+<thead><tr>
+<th>Setting</th>
+<th style="text-align:right">LoRA IFEval</th>
+<th style="text-align:right">SelfAug IFEval</th>
+<th style="text-align:right">Gain</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2K-token context</td>
+<td style="text-align:right">58.23</td>
+<td style="text-align:right">63.03</td>
+<td style="text-align:right">+4.80</td>
+</tr>
+<tr>
+<td>4K-token context</td>
+<td style="text-align:right">56.19</td>
+<td style="text-align:right">62.48</td>
+<td style="text-align:right">+6.29</td>
+</tr>
+<tr>
+<td>6K-token context</td>
+<td style="text-align:right">52.87</td>
+<td style="text-align:right">55.82</td>
+<td style="text-align:right">+2.95</td>
+</tr>
+<tr>
+<td>8K-token context</td>
+<td style="text-align:right">50.28</td>
+<td style="text-align:right">57.67</td>
+<td style="text-align:right">+7.39</td>
+</tr>
+</tbody>
+</table>
+<p>Across model sizes, SelfAug improves IFEval after LoRA fine-tuning by <strong>+8.32</strong> for 3B, <strong>+13.31</strong> for 7B, <strong>+21.63</strong> for 14B, <strong>+14.79</strong> for 32B, and <strong>+9.98</strong> for 72B.</p>
+<p><strong>Conclusion:</strong> the method preserves instruction-following ability while adapting to RAG tasks, and the effect is visible across context lengths and model scales.</p>
 <h2 id="11-notes-for-maintainers">11. Notes For Maintainers</h2>
 <ul>
 <li>Keep patched package files synchronized with the target <code>transformers</code> and <code>peft</code> versions.</li>

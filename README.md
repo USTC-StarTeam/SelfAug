@@ -73,6 +73,17 @@ The main experimental control is the weight between task loss and self-distribut
 
 SelfAug is designed to improve the balance between RAG specialization and general knowledge retention. The paper reports that preserving input-sequence distribution helps reduce catastrophic forgetting across fine-tuning scenarios.
 
+| Setting | LoRA IFEval | SelfAug IFEval | Gain |
+| --- | ---: | ---: | ---: |
+| 2K-token context | 58.23 | 63.03 | +4.80 |
+| 4K-token context | 56.19 | 62.48 | +6.29 |
+| 6K-token context | 52.87 | 55.82 | +2.95 |
+| 8K-token context | 50.28 | 57.67 | +7.39 |
+
+Across model sizes, SelfAug improves IFEval after LoRA fine-tuning by **+8.32** for 3B, **+13.31** for 7B, **+21.63** for 14B, **+14.79** for 32B, and **+9.98** for 72B.
+
+**Conclusion:** the method preserves instruction-following ability while adapting to RAG tasks, and the effect is visible across context lengths and model scales.
+
 ## 11. Notes For Maintainers
 
 - Keep patched package files synchronized with the target `transformers` and `peft` versions.
