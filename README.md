@@ -97,4 +97,9 @@ SelfAug is designed to improve the balance between RAG specialization and genera
 
 ## 13. Contact
 
-For paper questions, contact Hao Wang at `wanghao3@ustc.edu.cn` or Enhong Chen at `cheneh@ustc.edu.cn`. For repository issues, please open a GitHub issue in this repository.
+For paper questions, please contact:
+
+- First author: Yuqing Huang (`huangyuq@mail.ustc.edu.cn`)
+- Corresponding authors: Guiquan Liu (`gqliu@ustc.edu.cn`), Hao Wang (`wanghao3@ustc.edu.cn`), and Enhong Chen (`cheneh@ustc.edu.cn`)
+
+For repository issues, please open a GitHub issue in this repository.
