@@ -71,6 +71,13 @@ The main experimental control is the weight between task loss and self-distribut
 
 ## 10. Experimental Highlights
 
+![SelfAug downstream and forgetting-mitigation results](docs/assets/selfaug-main-results.png)
+
+![SelfAug context-length and model-scale generalization](docs/assets/selfaug-generalization-results.png)
+
+These tables from the experiments section show SelfAug's RAG-domain gains, instruction-following retention, context-length behavior, and model-scale generalization.
+
+
 SelfAug is designed to improve the balance between RAG specialization and general knowledge retention. The paper reports that preserving input-sequence distribution helps reduce catastrophic forgetting across fine-tuning scenarios.
 
 | Setting | LoRA IFEval | SelfAug IFEval | Gain |

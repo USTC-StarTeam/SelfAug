@@ -138,6 +138,9 @@ python update_module.py</code></pre>
 <h2 id="9-configuration-notes">9. Configuration Notes</h2>
 <p>The main experimental control is the weight between task loss and self-distribution alignment loss. Keep the package versions and patched file paths fixed when reproducing reported results.</p>
 <h2 id="10-experimental-highlights">10. Experimental Highlights</h2>
+<p><img src="assets/selfaug-main-results.png" alt="SelfAug downstream and forgetting-mitigation results"></p>
+<p><img src="assets/selfaug-generalization-results.png" alt="SelfAug context-length and model-scale generalization"></p>
+<p>These tables from the experiments section show SelfAug's RAG-domain gains, instruction-following retention, context-length behavior, and model-scale generalization.</p>
 <p>SelfAug is designed to improve the balance between RAG specialization and general knowledge retention. The paper reports that preserving input-sequence distribution helps reduce catastrophic forgetting across fine-tuning scenarios.</p>
 <table>
 <thead><tr>
